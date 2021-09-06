@@ -1,0 +1,66 @@
+site_name: Abhinav's notes
+site_description: notes about random things
+copyright: Made with ❤️ by Abhinav.
+repo_name: abhinavmarwaha/notes
+repo_url: https://github.com/abhinavmarwaha/notes
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  shortcuts:
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+  language: en
+  include_search_page: true
+  search_index_only: true
+  features:
+    - navigation.instant
+  font:
+    text: Inter
+    code: IMB Plex Mono
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      prebuild_index: python
+      lang:
+        - en
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/abhinavmarwaha
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/abhinav_marwaha
+nav:
+  - Home: index.md
+  - Java:
+    - java/intro.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.details
+  - footnotes
