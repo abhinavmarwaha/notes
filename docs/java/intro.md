@@ -1,4 +1,6 @@
-# what is [java](https://docs.oracle.com/javase/tutorial/)?
+# what is java?
+
+[javase/tutorial](https://docs.oracle.com/javase/tutorial/)
 
 ## programming language
 
@@ -37,7 +39,7 @@ Java platform a software-only platform that runs on top of other hardware-based 
 * User Interface Toolkits -  JavaFX, Swing, and Java 2D (GUI)
 * Integration Libraries - database access and manipulation of remote objects. (IDL, JDBC, JNDI, RMI, RMI-IIOP)
 
-![java-SE](java/img/java-SE.png)
+![java-SE](img/java-SE.png)
 
 [docs](https://docs.oracle.com/javase/8/docs/index.html)
 
