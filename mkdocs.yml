@@ -52,20 +52,20 @@ nav:
   - Home: index.md
   - Java:
     - java/intro.md
-    - java/annotations.md
+    - java/oops.md
+    - java/helloworld.md
     - java/basics.md
     - java/classes.md
-    - java/collections.md
-    - java/exceptions.md
-    - java/generics.md
-    - java/helloworld.md
     - java/inheritance.md
     - java/interfaces.md
+    - java/annotations.md
+    - java/strings.md
+    - java/exceptions.md
+    - java/collections.md
+    - java/generics.md
     - java/java9&beyond.md
     - java/numbers.md
-    - java/oops.md
     - java/packages.md
-    - java/strings.md
 
 markdown_extensions:
   - admonition
