@@ -66,6 +66,10 @@ nav:
     - java/java9&beyond.md
     - java/numbers.md
     - java/packages.md
+  - Php:
+    - php/intro.md
+    - php/basics.md
+    - php/security.md
 
 markdown_extensions:
   - admonition
