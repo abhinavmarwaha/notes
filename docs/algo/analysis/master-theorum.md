@@ -7,9 +7,10 @@ Master Method is a direct way to get the solution. The master method works only 
 T(n) = aT(n/b) + f(n) where a >= 1 and b > 1
 
 There are following three cases:
+
 1. If f(n) = Θ(nc) where c < Logba then T(n) = Θ(nLogba)
 2. If f(n) = Θ(nc) where c = Logba then T(n) = Θ(ncLog n)
-3.If f(n) = Θ(nc) where c > Logba then T(n) = Θ(f(n))
+3. If f(n) = Θ(nc) where c > Logba then T(n) = Θ(f(n))
 
 ### How does this work?
 

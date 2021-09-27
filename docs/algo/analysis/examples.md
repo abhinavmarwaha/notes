@@ -1,4 +1,4 @@
-# Example
+# Examples
 
 ```
 void fun() 
