@@ -96,6 +96,21 @@ nav:
       - ds/linked-list/dll.md
       - ds/linked-list/xor-dll.md
       - ds/linked-list/bin-tree-cdll.md
+    - Stack:
+      - ds/stack/intro.md
+      - ds/stack/reverse.md
+      - ds/stack/sort.md
+      - ds/stack/using-queue.md
+      - ds/stack/medium-special.md
+      - ds/stack/min-special.md
+      - ds/stack/stock-span.md
+      - ds/stack/k-stacks.md
+    - Queue:
+      - ds/queue/intro.md
+      - ds/queue/using-stack.md
+      - ds/queue/dequeue.md
+      - ds/queue/priority-queue.md
+      - ds/queue/print-binary.md
 
 markdown_extensions:
   - admonition

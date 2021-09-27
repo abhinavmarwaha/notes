@@ -4,19 +4,19 @@
 * follow LIFO/FILO order.
 * real life -> stack of plates
   
-Applications of stack:
+### Applications of stack:
 
-Balancing of symbols
-Infix to Postfix /Prefix conversion
-Redo-undo features at many places like editors, photoshop.
-Forward and backward feature in web browsers
-Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
-Other applications can be Backtracking, Knight tour problem, rat in a maze, N queen problem and sudoku solver
-In Graph Algorithms like Topological Sorting and Strongly Connected Components
+* Balancing of symbols
+* Infix to Postfix / Prefix conversion
+* Redo-undo
+* Forward and backward feature in web browsers
+* Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
+* Other applications can be Backtracking, Knight tour problem, rat in a maze, N queen problem and sudoku solver
+* In Graph Algorithms like Topological Sorting and Strongly Connected Components
 
-# Implementation
+### Implementation
 
-## Array
+#### Array
 
 Pros: Easy to implement. Memory is saved as pointers are not involved.
 Cons: It is not dynamic. It doesn’t grow and shrink depending on needs at runtime.
@@ -77,9 +77,8 @@ int Stack::peek()
 bool Stack::isEmpty() 
 { 
 	return (top < 0); 
-} 
+}
 
-// Driver program to test above functions 
 int main() 
 { 
 	class Stack s; 
@@ -93,7 +92,7 @@ int main()
 
 ```
 
-## Linked List
+##### Linked List
 
 Pros: The linked list implementation of stack can grow and shrink according to the needs at runtime.
 Cons: Requires extra memory due to involvement of pointers.
@@ -159,9 +158,7 @@ int main()
 	cout << "Top element is " << peek(root) << endl; 
 
 	return 0; 
-} 
-
-// This is code is contributed by rathbhupendra 
+}
 
 ```
 
@@ -205,19 +202,11 @@ void printNGE(int arr[], int n)
   
     int arr1[n]; 
   
-    // iterating from n-1 to 0 
     for (int i = n - 1; i >= 0; i--)  
-    { 
-        /*We will pop till we get the  
-        greater element on top or stack gets empty*/
+    {
         while (!s.empty() && s.top() <= arr[i]) 
             s.pop(); 
-  
-        /*if stack gots empty means there  
-        is no element on right which is greater  
-        than the current element. 
-        if not empty then the next greater  
-        element is on top of stack*/
+
         if (s.empty())  
             arr1[i] = -1;          
         else 
@@ -228,69 +217,5 @@ void printNGE(int arr[], int n)
   
     for (int i = 0; i < n; i++) 
         cout << arr[i] << " ---> " << arr1[i] << endl; 
-} 
-```
-
-## reverse-a-stack-using-recursion/
-
-```
-char insert_at_bottom(char x) 
-{ 
-  
-    if(st.size() == 0) 
-    st.push(x); 
-  
-    else
-    { 
-              
-        char a = st.top(); 
-        st.pop(); 
-        insert_at_bottom(x);
-        st.push(a); 
-    } 
-} 
-
-char reverse() 
-{ 
-    if(st.size()>0) 
-    { 
-          
-        char x = st.top(); 
-        st.pop(); 
-        reverse(); 
-        insert_at_bottom(x); 
-    } 
-}
-```
-
-## Sort Stack using recursion
-
-Time Complexity: O(n2). 
-In the worst case for every sortstack(), sortedinsert() is called for ‘N’ times recursively for putting element to the right place 
-Auxiliary Space: O(N)
-
-```
-void sortedInsert(struct stack** s, int x) 
-{ 
-    if (isEmpty(*s) or x > top(*s)) { 
-        push(s, x); 
-        return; 
-    } 
-  
-    int temp = pop(s); 
-    sortedInsert(s, x); 
-  
-    push(s, temp); 
-} 
-  
-void sortStack(struct stack** s) 
-{ 
-    if (!isEmpty(*s)) { 
-        int x = pop(s); 
-  
-        sortStack(s); 
-  
-        sortedInsert(s, x); 
-    } 
 } 
 ```

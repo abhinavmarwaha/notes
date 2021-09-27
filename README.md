@@ -16,3 +16,9 @@ virtualenv env
 pip install -r requirements.txt
 mkdocs serve
 ```
+
+# Image
+
+```
+![tile](<relative path>)
+```
