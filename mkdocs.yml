@@ -125,6 +125,33 @@ nav:
       - ds/set-map/multiset.md
       - ds/set-map/set-types.md
       - ds/set-map/map.md
+    - Tree:
+      - ds/tree/intro.md
+      - ds/tree/binary-tree.md
+      - ds/tree/bt-insertion.md
+      - ds/tree/bt-deletion.md
+      - ds/tree/bt-height.md
+      - ds/tree/traversal.md
+      - ds/tree/bt-level-order.md
+      - ds/tree/bt-enumeration.md
+      - ds/tree/bt-search.md
+      - ds/tree/bt-swap-nodes.md
+      - ds/tree/k-smallest.md
+      - ds/tree/lowest-common-ancestor.md
+      - ds/tree/bst.md
+      - ds/tree/bst-check.md
+      - ds/tree/bst-merge.md
+      - ds/tree/handshaking-lemma.md
+      - ds/tree/segment-tree.md
+    - Graph:
+      - ds/graph/intro.md
+      - ds/graph/bfs.md
+      - ds/graph/dfs.md
+      - ds/graph/dfs-disconnected.md
+    - Heap:
+      - ds/heap/intro.md
+      - ds/heap/heap-sort.md
+      - ds/heap/fibonacci-heap.md
 
 markdown_extensions:
   - admonition
