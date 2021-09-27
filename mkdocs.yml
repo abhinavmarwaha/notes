@@ -152,6 +152,21 @@ nav:
       - ds/heap/intro.md
       - ds/heap/heap-sort.md
       - ds/heap/fibonacci-heap.md
+  - Algo:
+    - Analysis:
+      - algo/analysis/intro.md
+      - algo/analysis/space.md
+      - algo/analysis/classes.md
+      - algo/analysis/examples.md
+      - algo/analysis/lower-upper-bound-theory.md
+      - algo/analysis/master-theorum.md
+      - algo/analysis/recursive.md
+      - algo/analysis/amortised.md
+      - algo/analysis/pseudo-polynomial.md
+    - Divide & Conquer:
+      - algo/dac/intro.md
+    - algo/maths.md
+    - algo/bits.md
 
 markdown_extensions:
   - admonition

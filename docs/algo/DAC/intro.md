@@ -1,3 +1,5 @@
+# Divide & Conquer
+
 ### Divide 
 This involves dividing the problem into some sub problem.
 
@@ -7,6 +9,7 @@ Sub problem by calling recursively until sub problem solved.
 ### Combine
 The Sub problem Solved so that we will get find problem solution.
 
+```
 DAC(a, i, j)
 {
     if(small(a, i, j))
@@ -20,3 +23,4 @@ DAC(a, i, j)
 }
 
 T(n) = f1(n) + 2T(n/2) + f2(n)
+```
