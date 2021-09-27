@@ -111,6 +111,20 @@ nav:
       - ds/queue/dequeue.md
       - ds/queue/priority-queue.md
       - ds/queue/print-binary.md
+    - String:
+      - ds/string/intro.md
+      - ds/string/string-to-no.md
+      - ds/string/reverse.md
+      - ds/string/rotation.md
+      - ds/string/duplicate.md
+      - ds/string/remove-duplicates.md
+      - ds/string/frequency.md
+      - ds/string/white-space.md
+    - Set & Map:
+      - ds/set-map/set.md
+      - ds/set-map/multiset.md
+      - ds/set-map/set-types.md
+      - ds/set-map/map.md
 
 markdown_extensions:
   - admonition
