@@ -70,6 +70,32 @@ nav:
     - php/intro.md
     - php/basics.md
     - php/security.md
+  - DS:
+    - Array:
+      - ds/array/intro.md
+      - ds/array/vs-pointers.md
+      - ds/array/multi-dimensional.md
+      - ds/array/vectors.md
+      - ds/array/functions.md
+      - ds/array/decay.md
+      - ds/array/frequency.md
+      - ds/array/min-max.md
+      - ds/array/reverse.md
+    - Linked List:
+      - ds/linked-list/intro.md
+      - ds/linked-list/vs-array.md
+      - ds/linked-list/count.md
+      - ds/linked-list/search.md
+      - ds/linked-list/insertion.md
+      - ds/linked-list/deletion.md
+      - ds/linked-list/functions.md
+      - ds/linked-list/generic.md
+      - ds/linked-list/swap.md
+      - ds/linked-list/reverse.md
+      - ds/linked-list/cll.md
+      - ds/linked-list/dll.md
+      - ds/linked-list/xor-dll.md
+      - ds/linked-list/bin-tree-cdll.md
 
 markdown_extensions:
   - admonition
