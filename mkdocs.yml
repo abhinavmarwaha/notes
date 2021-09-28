@@ -153,6 +153,7 @@ nav:
       - ds/heap/heap-sort.md
       - ds/heap/fibonacci-heap.md
   - Algo:
+    - algo/glossary.md
     - Analysis:
       - algo/analysis/intro.md
       - algo/analysis/space.md
@@ -163,10 +164,51 @@ nav:
       - algo/analysis/recursive.md
       - algo/analysis/amortised.md
       - algo/analysis/pseudo-polynomial.md
+    - Search:
+      - algo/search/intro.md
+      - algo/search/binary.md
+      - algo/search/ternery.md
+      - algo/search/exponential.md
+      - algo/search/interpolation.md
+      - algo/search/jump.md
+    - Sort:
+      - algo/sort/intro.md
+      - algo/sort/bubble.md
+      - algo/sort/insertion.md
+      - algo/sort/merge.md
+      - algo/sort/quick.md
+      - algo/sort/merge-quick.md
+      - algo/sort/selection.md
+      - algo/sort/topological.md
+      - algo/sort/counting.md
     - Divide & Conquer:
       - algo/dac/intro.md
+      - algo/dac/median.md
+      - algo/dac/min-max.md
+      - algo/dac/power.md
+      - algo/dac/strassen-mul.md
+      - algo/dac/closest-pair.md
+      - algo/dac/count-inversion.md
+    - DP:
+      - algo/dp/intro.md
+      - algo/dp/power.md
+      - algo/dp/knapsack.md
+    - Branch & Bound:
+      - algo/branch-bound/intro.md
+      - algo/branch-bound/knapsack.md
+    - Greedy:
+      - algo/greedy/intro.md
+    - Graph:
+      - algo/graph/cycle-detection.md
+    - Hashing:
+      - algo/hashing/intro.md
     - algo/maths.md
     - algo/bits.md
+    - algo/misc/automata.md
+    - algo/misc/locallity.md
+    - algo/misc/recursion.md
+    - algo/misc/segmentation-fault.md
+    - algo/misc/swap.md
 
 markdown_extensions:
   - admonition

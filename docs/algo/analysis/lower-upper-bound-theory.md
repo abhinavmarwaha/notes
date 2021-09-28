@@ -182,3 +182,35 @@ Clearly, the complexity of this code is O(n). This way of solving such equations
 ### Upper Bound Theory
 
 According to the upper bound theory, for an upper bound U(n) of an algorithm, we can always solve the problem in at most U(n) time.Time taken by a known algorithm to solve a problem with worse case input gives us the upper bound.
+
+https://www.geeksforgeeks.org/lower-and-upper-bound-theory/
+
+
+# Lower Bound
+
+L(n) >= C*g(n) for n > N. 
+
+Big Omega
+
+* L(n) here is the minimum of all the possible algorithm, of maximum complexity.
+* worst case
+* no algo below it
+
+optimal Algo ->  (U(n)=L(n)).
+
+* Trivial Lower Bound 
+* Computational Model
+
+Calculating the lower bound: The max no of comparisons are n. Let there be k levels in the tree.
+
+No. of nodes will be 2k-1
+The upper bound of no of nodes in any comparison based search of an element in list of size n will be n as there are maximum of n comparisons in worst case scenario 2k-1
+Each level will take 1 comparison thus no. of comparisons k≥|log2n|
+Thus the lower bound of any comparison based search from a list of n elements cannot be less than log(n). Therefore we can say that Binary Search is optimal as its complexity is Θ(log n).
+
+
+# Upper Bound
+
+U(n) <= C*g(n) for n > N. 
+
+Big oh.

@@ -1,5 +1,4 @@
-
-## Jump Search
+# Jump Search
 
 *requirements* : sorted array
 *time* : O(√n)

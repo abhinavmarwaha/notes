@@ -1,6 +1,6 @@
 # Merge Sort
 
-## Dummy nodes
+### Dummy nodes
 
 The strategy here uses a temporary dummy node as the start of the result list. The pointer Tail always points to the last node in the result list, so appending new nodes is easy. 
 The dummy node gives the tail something to point to initially when the result list is empty. This dummy node is efficient, since it is only temporary, and it is allocated in the stack. The loop proceeds, removing one node from either ‘a’ or ‘b’, and adding it to the tail. When 
@@ -53,7 +53,6 @@ void FrontBackSplit(Node* source,
     slow = source; 
     fast = source->next; 
   
-    /* Advance 'fast' two nodes, and advance 'slow' one node */
     while (fast != NULL) { 
         fast = fast->next; 
         if (fast != NULL) { 
@@ -61,16 +60,14 @@ void FrontBackSplit(Node* source,
             fast = fast->next; 
         } 
     } 
-  
-    /* 'slow' is before the midpoint in the list, so split it in two  
-    at that point. */
+
     *frontRef = source; 
     *backRef = slow->next; 
     slow->next = NULL; 
 } 
 ```
 
-## Local Reference
+### Local Reference
 
 lastPtrRef is same as dummy node (this is tail before was head)
 
@@ -110,7 +107,7 @@ return(result);
 
 ```
 
-## Recursive (Space is more... Prodution XXX)
+### Recursive (Space is more... Prodution XXX)
 
 ```
 Node* SortedMerge(Node* a, Node* b) 
@@ -134,56 +131,33 @@ Node* SortedMerge(Node* a, Node* b)
 	} 
 	return(result); 
 } 
-
 ```
 
+O(n Log n)
+Merge sort is often preferred for sorting a linked list. The slow random-access performance of a linked list makes some other algorithms (such as quicksort) perform poorly, and others (such as heapsort) completely impossible.
+sorting image
+
+Let head be the first node of the linked list to be sorted and headRef be the pointer to head. Note that we need a reference to head in MergeSort() as the below implementation changes next links to sort the linked lists (not data at the nodes), so head node has to be changed if the data at the original head is not the smallest value in the linked list.
 
 ```
-// O(n Log n)
-// Merge sort is often preferred for sorting a linked list. The slow random-access performance of a linked list makes some other algorithms (such as quicksort) perform poorly, and others (such as heapsort) completely impossible.
-// sorting image
-
-// Let head be the first node of the linked list to be sorted and headRef be the pointer to head. Note that we need a reference to head in MergeSort() as the below implementation changes next links to sort the linked lists (not data at the nodes), so head node has to be changed if the data at the original head is not the smallest value in the linked list.
-#include <bits/stdc++.h> 
-using namespace std; 
-
-/* Link list node */
-class Node { 
-public: 
-	int data; 
-	Node* next; 
-}; 
-
-/* function prototypes */
-Node* SortedMerge(Node* a, Node* b); 
-void FrontBackSplit(Node* source, 
-					Node** frontRef, Node** backRef); 
-
-/* sorts the linked list by changing next pointers (not data) */
 void MergeSort(Node** headRef) 
 { 
 	Node* head = *headRef; 
 	Node* a; 
 	Node* b; 
 
-	/* Base case -- length 0 or 1 */
 	if ((head == NULL) || (head->next == NULL)) { 
 		return; 
 	} 
 
-	/* Split head into 'a' and 'b' sublists */
 	FrontBackSplit(head, &a, &b); 
 
-	/* Recursively sort the sublists */
 	MergeSort(&a); 
 	MergeSort(&b); 
 
-	/* answer = merge the two sorted lists together */
 	*headRef = SortedMerge(a, b); 
 } 
 
-/* See https:// www.geeksforgeeks.org/?p=3622 for details of this 
-function */
 Node* SortedMerge(Node* a, Node* b) 
 { 
 	Node* result = NULL; 
@@ -206,11 +180,6 @@ Node* SortedMerge(Node* a, Node* b)
 	return (result); 
 } 
 
-/* UTILITY FUNCTIONS */
-/* Split the nodes of the given list into front and back halves, 
-	and return the two lists using the reference parameters. 
-	If the length is odd, the extra node should go in the front list. 
-	Uses the fast/slow pointer strategy. */
 void FrontBackSplit(Node* source, 
 					Node** frontRef, Node** backRef) 
 { 
@@ -219,7 +188,6 @@ void FrontBackSplit(Node* source,
 	slow = source; 
 	fast = source->next; 
 
-	/* Advance 'fast' two nodes, and advance 'slow' one node */
 	while (fast != NULL) { 
 		fast = fast->next; 
 		if (fast != NULL) { 
@@ -228,63 +196,217 @@ void FrontBackSplit(Node* source,
 		} 
 	} 
 
-	/* 'slow' is before the midpoint in the list, so split it in two 
-	at that point. */
 	*frontRef = source; 
 	*backRef = slow->next; 
 	slow->next = NULL; 
 } 
+```
 
-/* Function to print nodes in a given linked list */
-void printList(Node* node) 
-{ 
-	while (node != NULL) { 
-		cout << node->data << " "; 
-		node = node->next; 
-	} 
-} 
+Time : T(n) = 2T(n/2) + θ(n) :  θ(nLogn) in all 3 cases (worst, average and best)
+Space: O(n)
+Algorithmic Paradigm: Divide and Conquer
+Sorting In Place: No in a typical implementation
+Stable: Yes
 
-/* Function to insert a node at the beginging of the linked list */
-void push(Node** head_ref, int new_data) 
-{ 
-	/* allocate node */
-	Node* new_node = new Node(); 
+Applications 
 
-	/* put in the data */
-	new_node->data = new_data; 
+* sorting linked lists ->  as  Quick Sort requires a lot of direct access
+* Inversion Count Problem
+* Used in External Sorting
 
-	/* link the old list off the new node */
-	new_node->next = (*head_ref); 
+```
+void merge(int arr[], int l, int m, int r)
+{
+	int n1 = m - l + 1;
+	int n2 = r - m;
 
-	/* move the head to point to the new node */
-	(*head_ref) = new_node; 
-} 
+	int L[n1], R[n2];
 
-/* Driver program to test above functions*/
-int main() 
-{ 
-	/* Start with the empty list */
-	Node* res = NULL; 
-	Node* a = NULL; 
+	for (int i = 0; i < n1; i++)
+		L[i] = arr[l + i];
+	for (int j = 0; j < n2; j++)
+		R[j] = arr[m + 1 + j];
 
-	/* Let us create a unsorted linked lists to test the functions 
-Created lists shall be a: 2->3->20->5->10->15 */
-	push(&a, 15); 
-	push(&a, 10); 
-	push(&a, 5); 
-	push(&a, 20); 
-	push(&a, 3); 
-	push(&a, 2); 
+	int i = 0;
 
-	/* Sort the above created Linked List */
-	MergeSort(&a); 
+	int j = 0;
 
-	cout << "Sorted Linked List is: \n"; 
-	printList(a); 
+	int k = l;
 
-	return 0; 
-} 
+	while (i < n1 && j < n2) {
+		if (L[i] <= R[j]) {
+			arr[k] = L[i];
+			i++;
+		}
+		else {
+			arr[k] = R[j];
+			j++;
+		}
+		k++;
+	}
 
-// This is code is contributed by rathbhupendra 
+	while (i < n1) {
+		arr[k] = L[i];
+		i++;
+		k++;
+	}
 
+	while (j < n2) {
+		arr[k] = R[j];
+		j++;
+		k++;
+	}
+}
+
+void mergeSort(int arr[],int l,int r){
+	if(l>=r){
+		return;
+	}
+	int m = (l+r-1)/2;
+	mergeSort(arr,l,m);
+	mergeSort(arr,m+1,r);
+	merge(arr,l,m,r);
+}
+```
+
+O(nlogn) T(n) = 2T(n/2) + \Theta(n) , O(n)
+stable, not inplace generally
+External sort
+
+```
+void merge(int arr[], int l, int mid, int r){
+
+    int i=0, j=0, k=0;
+
+    int n1 = mid-l + 1;
+    int n2 = r-mid;
+
+    int L[n1];
+    int R[n2];
+
+
+    while(i<n1){
+        L[i] = arr[l+i];
+        i++;
+    }
+
+    while(j<n2){
+        R[j] = arr[mid+1+j];
+        j++;
+    }
+    
+    i =0, j=0, k=l;
+
+
+    while(i<n1 && j<n2){
+        if(L[i]<=R[j]){
+            arr[k] = L[i];
+            i++;
+        }
+        else{
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+
+    while(i<n1){
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while(j<n2){
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+}
+
+void mergesort(int arr[], int l, int r){
+
+    if(l<r){
+        int mid = (l+r)/2;
+
+        mergesort(arr, l, mid);
+        mergesort(arr, mid+1, r);
+
+        merge(arr, l, mid, r);
+    }
+
+}
+```
+
+https://www.geeksforgeeks.org/merge-sort-for-linked-list/
+
+O(nlogn), O(1)
+merge sort is best for linked list.
+
+```
+Node* merge(Node* a, Node* b){
+    Node* result = NULL;
+
+    if(a==NULL){
+        return b;
+
+    }
+    else if(b==NULL)
+        return a;
+
+    if(a->data <= b->data){
+        result = a;
+        result->next = merge(a->next, b);
+    }
+    else{
+        result=b;
+        result->next = merge(a, b->next);
+    }
+
+    return result;
+
+}
+
+void Split(Node* source, Node** a, Node** b){
+
+    Node* fast;
+    Node* slow;
+    slow = source;
+    fast = source->next;
+    while(fast!=NULL){
+        fast = fast->next;
+        while(fast!=NULL){
+
+            slow = slow->next;
+            fast = fast->next;
+        }
+    }
+
+    *a = source;
+    *b = (slow->next);
+
+    slow->next = NULL;
+
+
+
+}
+
+
+void mergeSort(Node** headref){
+    Node* head = *headref;
+    Node* a;
+    Node* b;
+    if((head==NULL)|| (head->next ==NULL)){
+        return;
+    }
+
+    Split(head, &a, &b);
+
+    mergeSort(&a);
+    mergeSort(&b);
+
+    *headref = merge(a,b);
+
+}
 ```

@@ -1,5 +1,4 @@
-
-## interpolation Search
+# interpolation Search
 
 *requirements* : sorted array
 *time* : uniformly distributed -> O (log log n). worst case -> O(n).
@@ -71,7 +70,7 @@ int interpolationSearch(int arr[], int lo,
 } 
 ```
 
-# Interpolation vs Binary
+### Interpolation vs Binary
 
 log(log(n)) comparisons -> uniformly distributed
 

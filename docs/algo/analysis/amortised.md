@@ -44,3 +44,4 @@ https://www.geeksforgeeks.org/analysis-algorithm-set-5-amortized-analysis-introd
 
 Thus, the total amortized cost of insertion in Red-Black Tree is O(n).
 
+![Red Black Tree](img/red-black.png)
