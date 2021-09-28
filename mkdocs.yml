@@ -198,10 +198,25 @@ nav:
       - algo/branch-bound/knapsack.md
     - Greedy:
       - algo/greedy/intro.md
+      - algo/greedy/jobs.md
+      - algo/greedy/activities.md
+      - algo/greedy/min-coins.md
+      - algo/greedy/min-platform.md
+      - algo/greedy/huffman-coding.md
+      - algo/greedy/improved-huffman.md
+      - algo/greedy/mst-prim.md
+      - algo/greedy/mst-kruskal.md
     - Graph:
       - algo/graph/cycle-detection.md
     - Hashing:
       - algo/hashing/intro.md
+      - algo/hashing/union-intersection.md
+      - algo/hashing/subset-array.md
+      - algo/hashing/kdistance-duplicate.md
+      - algo/hashing/itinerary-tickets.md
+      - algo/hashing/sum-2-array.md
+      - algo/hashing/tree-print-vertical.md
+      - algo/hashing/java-hashing.md
     - algo/maths.md
     - algo/bits.md
     - algo/misc/automata.md

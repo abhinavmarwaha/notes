@@ -1,4 +1,4 @@
-# introduction
+# Introduction
 
 operations required -> insert, search and delete
 
@@ -10,7 +10,7 @@ operations required -> insert, search and delete
 * Direct Access table --> O(1) but space required is huge *hence we use hashing* 
 * O(m * 10n) space for table where m is size of a pointer to record. Another problem is an integer in a programming language may not store n digits.
 
-# Hashing
+### Hashing
 
 * Improvement over direct access
 * O(1) on average {under reasonable assumptions}
@@ -44,19 +44,21 @@ How often? -> With only 23 persons, the probability that two people have the sam
 * *Chaining*: hash table points to linked list that has same hash value... good but requires extra space outside the hash table.
 * *Open Addressing*: all elements are in hash table only.
 
-## Chaining
+### Chaining
 
 Advantages:
-1) Simple to implement.
-2) Hash table never fills up, we can always add more elements to the chain.
-3) Less sensitive to the hash function or load factors.
-4) It is mostly used when it is unknown how many and how frequently keys may be inserted or deleted.
+
+1. Simple to implement.
+2. Hash table never fills up, we can always add more elements to the chain.
+3. Less sensitive to the hash function or load factors.
+4. It is mostly used when it is unknown how many and how frequently keys may be inserted or deleted.
 
 Disadvantages:
-1) Cache performance of chaining coz a linked list. Open addressing provides better cache performance as everything is stored in the same table.
-2) Wastage of Space
-3) If chain -> long, then search time -> O(n) worst case.
-4) extra space -> links.
+
+1. Cache performance of chaining coz a linked list. Open addressing provides better cache performance as everything is stored in the same table.
+2. Wastage of Space
+3. If chain -> long, then search time -> O(n) worst case.
+4. extra space -> links.
 
 ### Performace
 
@@ -76,7 +78,7 @@ Time to insert = O(1)
  O(1) if  α is O(1)
  '''
 
- ## Open Addressing
+### Open Addressing
 
 * Insert(k): Keep probing until an empty slot is found.
 * Search(k): Keep probing until slot’s key doesn’t become equal to k or an empty slot is reached.
