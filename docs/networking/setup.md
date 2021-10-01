@@ -74,8 +74,84 @@ AutomapHostsSuffixes .exit,.onion
 ControlPort 9051
 ```
 
-### Whonix, or TorVM (over qubesOS)
+##### Whonix, or TorVM (over qubesOS)
 
 virtualized torification applications
 
-### Amnesic solution like Tails
+##### Amnesic solution like Tails
+
+# Terminal
+
+* Terminator
+
+```
+CTRL+SHIFT+O – Horizontal Split
+CTRL+SHIFT+E – Vertical Split
+```
+
+* Tmux 
+
+```
+CTRL+B & C -> new session
+CTRL+B & <SESSION-NUMBER> -> switch to session
+```
+
+* ZSH
+* oh my zsh
+
+# Automatic macchanger configuration
+
+```
+/etc/NetworkManager/conf.d/wifi_rand_mac.conf
+
+wifi.scan-rand-mac-address=yes
+ethernet.cloned-mac-address=random
+wifi.cloned-mac-address=stable
+```
+
+### Tools
+
+* BURP suite
+* Wireshark
+* nmap + zenmap
+* docker
+* gnu-netcat -> swiss army networking tool
+* metasploit
+* shodan -> iot search engine
+* wpscan
+* weevely -> remote shell
+* Veil-framework -> obsfcucate exploits // use py2exe
+* sqlmap -> sql injection
+* routersploit -> embedded system exploitation
+* recon-ng
+* rainbowcrack, johnthereaper
+* exploitdb -> find exploits
+* honeypot -> http://canarytokens.org/generate
+* theHarvester, OSRFramework, dmitry -> OSINT
+* https://gtfobins.github.io/ -> linux privelage escalation
+* Evil-Droid, apkwash -> embedding payloads into apk's
+* Quasar -> window's RAT
+* Windows Credentials Editor (WCE) -> post exploitation.
+* LaZagne, Empire -> post exploitation
+* maltego -> 
+
+### BlackArch
+
+* smikims-arpspoof
+
+### Other relevent packages
+
+* yay -> AUR helper
+* python
+* git
+* macchanger
+* wine -> run windows applications
+* snapd -> snap store
+
+
+### Languages
+
+* ruby / rvm
+* python pip
+* java
+* go

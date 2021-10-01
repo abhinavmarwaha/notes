@@ -1,0 +1,1 @@
+create git repo for configuration files (~/.*)
