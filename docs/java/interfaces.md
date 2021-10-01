@@ -1,3 +1,5 @@
+# Interfaces
+
 A contract that other people adhere to and people know the API but not the implementation
 
 ```
@@ -70,7 +72,7 @@ public int isLargerThan(Relatable other) {
     }
 ```
 
-## Evolving Interfaces
+### Evolving Interfaces
 
 making changes in historic interfaces make devs angry. either extend it, or define static and default methods.
 
@@ -80,13 +82,13 @@ default boolean didItWork(int i, double x, String s) {
    }
 ```
 
-## Extending Interfaces That Contain Default Methods
+### Extending Interfaces That Contain Default Methods
 
 Not mention the default method at all, which lets your extended interface inherit the default method.
 Redeclare the default method, which makes it abstract.
 Redefine the default method, which overrides it.
 
-## Static Methods
+### Static Methods
 
 A static method is a method that is associated with the class in which it is defined rather than with any object. Every instance of the class shares its static methods
 

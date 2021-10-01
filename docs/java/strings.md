@@ -1,3 +1,5 @@
+# Strings
+
 Character class is immutable
 String class is immutable
 
@@ -91,13 +93,13 @@ public class StringDemo {
 }
 ```
 
-## Why?
+### Why?
 
 String is immutable while stringbuilder ain't
 
 Note also that there is StringBuffer in addition to StringBuilder. The difference is that the former has synchronized methods. If you use it as a local variable, use StringBuilder. If it happens that it's possible for it to be accessed by multiple threads, use StringBuffer (that's rarer)
 
-## autoboxing and unboxing
+### autoboxing and unboxing
 
 autoboxing -> primitive to object
 unboxing -> object to primitive

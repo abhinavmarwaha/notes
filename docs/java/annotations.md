@@ -1,3 +1,5 @@
+# Annotations
+
 A form of metadata, provide data about a program that is not part of the program itself. 
 
 * Information for the compiler — Annotations can be used by the compiler to detect errors or suppress warnings.
@@ -62,7 +64,7 @@ void monitorTemperature() throws
     @Critical TemperatureException { ... }
 ```
 
-## Annotation Type
+### Annotation Type
 
 Many annotations replace comments in code.
 
@@ -96,7 +98,7 @@ public class Generation3List extends Generation2List {
 }
 ```
 
-### java inbuilt
+##### java inbuilt
 
 ```
 @Deprecated 
@@ -110,7 +112,7 @@ public class Generation3List extends Generation2List {
 // TODO @FunctionalInterface 
 ```
 
-# Meta annotations
+### Meta annotations
 
 @Retention:
 
@@ -127,7 +129,7 @@ RetentionPolicy.RUNTIME – The marked annotation is retained by the JVM so it c
 @Repeatable - more than once
 ```
 
-# Type Annotations and Pluggable Type Systems
+### Type Annotations and Pluggable Type Systems
 
 expressions (new), casts, implements clauses, and throws clauses.
 ```
@@ -135,7 +137,7 @@ expressions (new), casts, implements clauses, and throws clauses.
 ```
 Checker Framework
 
-# Repeating Annotations
+### Repeating Annotations
 
 ```
 @Schedule(dayOfMonth="last")
@@ -173,14 +175,14 @@ public @interface Schedules {
 }
 ```
 
-## Retrieving Annotations
+### Retrieving Annotations
 
 ```
 AnnotatedElement.getAnnotation(Class<T>)
 AnnotatedElement.getAnnotationsByType(Class<T>)
 ```
 
-## Design Considerations
+### Design Considerations
 
 you must consider the cardinality of annotations of that type.
 to be as flexible and powerful as possible.

@@ -1,6 +1,8 @@
+# Packages
+
 A package is a grouping of related types (classes, interfaces, enumerations (classes), and annotation types (interfaces)) providing access protection and name space management.
 
-# Why?
+### Why?
 
 * types are related.
 * easy to find types that can provide particular functions.
@@ -17,7 +19,7 @@ only one public type in one source file.
 You can include non-public types in the same file as a public type (this is strongly discouraged, unless the non-public types are small and closely related to the public type).
 All the top-level, non-public types will be package private.
 
-# Naming
+### Naming
 
 The fully qualified name -> library.package.class
 
@@ -27,19 +29,21 @@ The fully qualified name -> library.package.class
 * Packages in the Java language itself begin with java. or javax.
 * add an underscore for reserved keywords and hyphens adn starting with numbers
 
-# Usage
+### Usage
 
-## by Its Qualified Name
+##### by Its Qualified Name
+
 _all right for infrequent use_
 
 You can use a package member's simple name if the code you are writing is in the same package as that member or if that member has been imported.
 
-## Importing a Package Member
+##### Importing a Package Member
 
 ```
 import graphics.Rectangle;
 ```
-## Importing an Entire Package
+
+##### Importing an Entire Package
 
 if you use many types from a package, you should import the entire package.
 It cannot be used to match a subset of the classes in a package.
@@ -48,7 +52,7 @@ It cannot be used to match a subset of the classes in a package.
 import graphics.*;
 ```
 
-## import the public nested classes of an enclosing class. 
+##### import the public nested classes of an enclosing class. 
 
 ```
 import graphics.Rectangle;
@@ -57,7 +61,7 @@ import graphics.Rectangle.*;
 
 Be aware that the second import statement will not import Rectangle.
 
-## static import
+##### static import
 
 when you need frequent access to static final fields (constants) and static methods from one or two classes. 
 
@@ -67,19 +71,19 @@ import static java.lang.Math.*;
 
 Java compiler automatically imports:
 
-1) the java.lang package
-2) the package for the current file
+1. the java.lang package
+2. the package for the current file
 
-# Apparent Hierarchies of Packages
+### Apparent Hierarchies of Packages
 
 java.awt.xxxx packages are not included in the java.awt package.
 java.awt is used for a number of related packages to make the relationship evident, but not to show inclusion.
 
-# Name Ambiguities
+### Name Ambiguities
 
 if a type in 2 packages have same name and both packagesare included -> use member's fully qualified name.
 
-# Managing Source and Class Files
+### Managing Source and Class Files
 
 hierarchical file systems to manage source and class files, although The Java Language Specification does not require this. 
 
@@ -107,4 +111,3 @@ then the compiler and JVM look for .class files in
 ```
 
 By default, the compiler and the JVM search the current directory and the JAR file containing the Java platform classes so that these directories are automatically in your class path.
-

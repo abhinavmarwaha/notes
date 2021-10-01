@@ -1,4 +1,6 @@
-# Variables
+# Basics
+
+### Variables
 
 * Instance Variables (Non-Static Fields)
 * Class Variables (Static Fields) 
@@ -9,7 +11,7 @@ long creditCardNumber = 1234_5678_9012_3456L;
 
 primitive data types are: byte, short, int, long, float, double, boolean, and char. java.lang.String class
 
-## Naming
+##### Naming
 
 * case sensitive
 * unlimited-length sequence of Unicode letters and digits (avoid _ and $ in start)
@@ -17,7 +19,7 @@ primitive data types are: byte, short, int, long, float, double, boolean, and ch
 * gearRatio 
 * NUM_GEARS = 6
 
-## Arrays
+### Arrays
 
 its length is fixed.
 
@@ -34,7 +36,7 @@ System.arraycopy(copyFrom, 2, copyTo, 0, 7);
 java.util.Arrays.copyOfRange(copyFrom, 2, 9);
 ```
 
-### java.util.Arrays
+##### java.util.Arrays
 
 * binarySearch 
 * equals 
@@ -43,25 +45,30 @@ java.util.Arrays.copyOfRange(copyFrom, 2, 9);
 * java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print)
 * System.out.println(java.util.Arrays.toString(copyTo))
 
-# Operators
+### Operators
 
 specific operations on one, two, or three operands, and then return a result.
 
 Simple Assignment Operator
 
-= 
+```
+=
+```
 
 Arithmetic Operators
 
+```
 +       Additive operator (also used
         for String concatenation)
 -       Subtraction operator
 *       Multiplication operator
 /       Division operator
 %       Remainder operator
+```
 
 Unary Operators
 
+```
 +       Unary plus operator; indicates
         positive value (numbers are 
         positive without this, however)
@@ -73,9 +80,11 @@ Unary Operators
         a value by 1
 !       Logical complement operator;
         inverts the value of a boolean
+```
 
 Equality and Relational Operators
 
+```
 ==      Equal to
 !=      Not equal to
 >       Greater than
@@ -87,14 +96,18 @@ Conditional Operators
 ||      Conditional-OR
 ?:      Ternary (shorthand for 
         if-then-else statement)
+```
 
 Type Comparison Operator
 
+```
 instanceof      Compares an object to 
                 a specified type 
+```
 
 Bitwise and Bit Shift Operators
 
+```
 ~       Unary bitwise complement
 <<      Signed left shift
 >>      Signed right shift
@@ -102,10 +115,14 @@ Bitwise and Bit Shift Operators
 &       Bitwise AND
 ^       Bitwise exclusive OR
 |       Bitwise inclusive OR
+```
 
-# Expressions (result=9), blocks({}), statements ;->;
+* Expressions -> result=9
+* blocks -> {}
+* statements ;->;
 
-# Control flow
+### Control flow
+
 _program runs in top-down_
 
 decision-making statements
@@ -171,8 +188,8 @@ if (foundIt) {
 } 
 ```
 
-# access modifiers
+### access modifiers
 
 * public field is accessible from all classes.
 * private field is accessible only within its own class.
-
+* protected - same class and derived classes

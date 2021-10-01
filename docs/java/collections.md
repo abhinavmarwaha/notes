@@ -1,3 +1,5 @@
+# Collections
+
 A collection — sometimes called a container — is simply an object that groups multiple elements into a single unit. Collections are used to store, retrieve, manipulate, and communicate aggregate data.
 
 collections framework is a unified architecture for representing and manipulating collections. eg c++ STL
@@ -8,7 +10,7 @@ Implementations: These are the concrete implementations of the collection interf
 
 Algorithms: These are the methods that perform useful computations, polymorphic, reusable functionality.
 
-## Why?
+### Why?
 
 * Reduces programming effort
 * Increases program speed and quality
@@ -28,7 +30,7 @@ Collections:
 Map
 * SortedMap
 
-## Interfaces
+### Interfaces
 
 These interfaces allow collections to be manipulated independently of the details of their representation.
 
@@ -53,11 +55,11 @@ SortedSet — a Set that maintains its elements in ascending order.
 
 SortedMap — a Map that maintains its mappings in ascending key order. 
 
-## Traversing Collections
+### Traversing Collections
 
-1) using aggregate operations 
-2) with the for-each construct
-3) by using Iterators.
+1. using aggregate operations 
+2. with the for-each construct
+3. by using Iterators.
 
 ```
 myShapesCollection.stream()
@@ -140,9 +142,7 @@ public class Anagrams {
 }
 ```
 
-
-
-## Aggregate Operations
+### Aggregate Operations
 
 ```
 double average = roster
@@ -153,7 +153,7 @@ double average = roster
     .getAsDouble();
 ```
 
-### Aggregate Operations vs Iterators
+##### Aggregate Operations vs Iterators
 
 They use internal iteration: It can more easily take advantage of parallel computing, which involves dividing a problem into subproblems, solving those problems simultaneously, and then combining the results of the solutions to the subproblems. Parallelism
 
@@ -203,9 +203,12 @@ Map<Person.Sex, Integer> totalAgeByGender =
                     Integer::sum))); // operation
 ```
 
-## Algorithms
+### Algorithms
 
-## Custom implementation
+### Custom implementation
 
-## Interoperability
+### Interoperability
 
+TODO
+
+[Link](https://docs.oracle.com/javase/tutorial/collections/index.html)

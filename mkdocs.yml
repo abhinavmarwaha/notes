@@ -53,19 +53,33 @@ nav:
   - Java:
     - java/intro.md
     - java/oops.md
-    - java/helloworld.md
+    - java/hello.md
     - java/basics.md
     - java/classes.md
     - java/inheritance.md
     - java/interfaces.md
     - java/annotations.md
     - java/strings.md
+    - java/re.md
     - java/exceptions.md
     - java/collections.md
     - java/generics.md
-    - java/java9&beyond.md
     - java/numbers.md
     - java/packages.md
+    - java/io.md
+    - java/concurrency.md
+    - java/networking.md
+    - java/jaxb.md
+    - java/json.md
+    - java/security.md
+    - java/debugging.md
+    - java/deployment.md
+    - java/jdbc.md
+    - java/garbage-collection.md
+    - java/java9-beyond.md
+    - java/platform.md
+    - java/jsp.md
+    - java/i18n.md
   - Php:
     - php/intro.md
     - php/basics.md
@@ -164,6 +178,8 @@ nav:
       - algo/analysis/recursive.md
       - algo/analysis/amortised.md
       - algo/analysis/pseudo-polynomial.md
+      - algo/analysis/caching.md
+      - algo/analysis/graph-coloring.md
     - Search:
       - algo/search/intro.md
       - algo/search/binary.md
@@ -202,6 +218,7 @@ nav:
       - algo/greedy/activities.md
       - algo/greedy/min-coins.md
       - algo/greedy/min-platform.md
+      - algo/greedy/dijkstra.md
       - algo/greedy/huffman-coding.md
       - algo/greedy/improved-huffman.md
       - algo/greedy/mst-prim.md
@@ -224,6 +241,7 @@ nav:
     - algo/misc/recursion.md
     - algo/misc/segmentation-fault.md
     - algo/misc/swap.md
+  - web.md
 
 markdown_extensions:
   - admonition

@@ -1,3 +1,5 @@
+# Numbers
+
 reasons to use objects in place of primitives, and the Java platform provides wrapper classes for each of the primitive data types. These classes "wrap" the primitive in an object. Often, the wrapping is done by the compiler
 
 * As an argument of a method that expects an object (often used when manipulating collections of numbers).
@@ -39,7 +41,7 @@ System.out.println(value + "  " + pattern + "  " + output);
 | 123.78      | 000000.000  | 000123.780  | 
 | 12345.67    | $###,###.###| $12,345.67  |
 
-## Advanced math
+### Advanced math
 
 ```
 import static java.lang.Math.*;
