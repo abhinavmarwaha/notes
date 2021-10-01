@@ -133,7 +133,7 @@ wifi.cloned-mac-address=stable
 * Quasar -> window's RAT
 * Windows Credentials Editor (WCE) -> post exploitation.
 * LaZagne, Empire -> post exploitation
-* maltego -> 
+* maltego -> open source intelligence and graphical link analysis tool 
 
 ### BlackArch
 
@@ -147,7 +147,6 @@ wifi.cloned-mac-address=stable
 * macchanger
 * wine -> run windows applications
 * snapd -> snap store
-
 
 ### Languages
 

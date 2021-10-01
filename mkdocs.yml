@@ -261,6 +261,7 @@ nav:
     - toc/automata.md
   - web.md
   - google-fu.md
+  - no-code.md
 
 markdown_extensions:
   - admonition
