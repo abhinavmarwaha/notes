@@ -242,6 +242,7 @@ nav:
     - algo/misc/segmentation-fault.md
     - algo/misc/swap.md
   - web.md
+  - google-fu.md
 
 markdown_extensions:
   - admonition
