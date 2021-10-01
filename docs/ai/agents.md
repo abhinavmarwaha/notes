@@ -1,4 +1,4 @@
-# Agent
+# Agents
 
 * perceiving its environment through sensors
 * acting upon that environment through actuators

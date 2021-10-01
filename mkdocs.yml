@@ -51,7 +51,18 @@ extra:
 nav:
   - Home: index.md
   - AI:
+    - ai/intro.md
     - ai/intelligence.md
+    - ai/history.md
+    - ai/subjects.md
+    - ai/agents.md
+    - ai/environment.md
+    - ai/tasks.md
+    - ai/technique.md
+    - ai/search.md
+    - ai/constraint-satisfaction.md
+    - ai/game-playing.md
+    - ai/means-ends.md
   - Java:
     - java/intro.md
     - java/oops.md
@@ -245,6 +256,8 @@ nav:
     - algo/misc/swap.md
   - Networking:
     - networking/setup.md
+  - TOC:
+    - toc/automata.md
   - web.md
   - google-fu.md
 
