@@ -50,6 +50,8 @@ extra:
       link: https://twitter.com/abhinav_marwaha
 nav:
   - Home: index.md
+  - AI:
+    - ai/intelligence.md
   - Java:
     - java/intro.md
     - java/oops.md
@@ -241,6 +243,8 @@ nav:
     - algo/misc/recursion.md
     - algo/misc/segmentation-fault.md
     - algo/misc/swap.md
+  - Networking:
+    - networking/setup.md
   - web.md
   - google-fu.md
 
