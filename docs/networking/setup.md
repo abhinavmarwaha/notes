@@ -112,6 +112,7 @@ wifi.cloned-mac-address=stable
 ### Tools
 
 * BURP suite
+* zaproxy -> owasp web app scanner
 * Wireshark
 * nmap + zenmap
 * docker
@@ -154,3 +155,4 @@ wifi.cloned-mac-address=stable
 * python pip
 * java
 * go
+* c++ / make
