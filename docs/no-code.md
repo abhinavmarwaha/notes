@@ -2,17 +2,18 @@
 
 ### App Building
 
-* https://www.honeycode.aws/
-* https://www.appsheet.com/
-* https://webflow.com/
-* https://elementor.com/
+* [Honeycode](https://www.honeycode.aws/)
+* [Appsheet](https://www.appsheet.com/)
+* [Webflow](https://webflow.com/)
+* [Elementor](https://elementor.com/)
+* [Debuild](https://debuild.co/)
 
 ### Front-page / docs
 
-* https://www.notion.so/
-* https://carrd.co/
+* [Notion](https://www.notion.so/)
+* [Carrd](https://carrd.co/)
 
 ### Automations
 
-* https://www.airtable.com/
-* https://zapier.com/
+* [Airtable](https://www.airtable.com/)
+* [Zapier](https://zapier.com/)
