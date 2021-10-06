@@ -41,6 +41,9 @@ plugins:
         - en
   - minify:
       minify_html: true
+  # - pdf-export:
+  #       verbose: true
+  #       media_type: print
 
 extra:
   social:
@@ -48,6 +51,7 @@ extra:
       link: https://github.com/abhinavmarwaha
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/abhinav_marwaha
+  manifest: manifest.webmanifest
 nav:
   - Home: index.md
   - AI:
