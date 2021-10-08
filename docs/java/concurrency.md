@@ -424,6 +424,230 @@ If the instance fields include references to mutable objects, don't allow those 
 Don't provide methods that modify the mutable objects.
 Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
 
+
+
+# High Level Concurrency Objects
+
+### Lock Objects
+
+Synchronized code relies on a simple kind of reentrant lock. 
+
+wait/notify mechanism, through their associated Condition objects.
+
+The tryLock method backs out if the lock is not available immediately or before a timeout expires (if specified). 
+
+```
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.Random;
+
+public class Safelock {
+    static class Friend {
+        private final String name;
+        private final Lock lock = new ReentrantLock();
+
+        public Friend(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return this.name;
+        }
+
+        public boolean impendingBow(Friend bower) {
+            Boolean myLock = false;
+            Boolean yourLock = false;
+            try {
+                myLock = lock.tryLock();
+                yourLock = bower.lock.tryLock();
+            } finally {
+                if (! (myLock && yourLock)) {
+                    if (myLock) {
+                        lock.unlock();
+                    }
+                    if (yourLock) {
+                        bower.lock.unlock();
+                    }
+                }
+            }
+            return myLock && yourLock;
+        }
+            
+        public void bow(Friend bower) {
+            if (impendingBow(bower)) {
+                try {
+                    System.out.format("%s: %s has"
+                        + " bowed to me!%n", 
+                        this.name, bower.getName());
+                    bower.bowBack(this);
+                } finally {
+                    lock.unlock();
+                    bower.lock.unlock();
+                }
+            } else {
+                System.out.format("%s: %s started"
+                    + " to bow to me, but saw that"
+                    + " I was already bowing to"
+                    + " him.%n",
+                    this.name, bower.getName());
+            }
+        }
+
+        public void bowBack(Friend bower) {
+            System.out.format("%s: %s has" +
+                " bowed back to me!%n",
+                this.name, bower.getName());
+        }
+    }
+
+    static class BowLoop implements Runnable {
+        private Friend bower;
+        private Friend bowee;
+
+        public BowLoop(Friend bower, Friend bowee) {
+            this.bower = bower;
+            this.bowee = bowee;
+        }
+    
+        public void run() {
+            Random random = new Random();
+            for (;;) {
+                try {
+                    Thread.sleep(random.nextInt(10));
+                } catch (InterruptedException e) {}
+                bowee.bow(bower);
+            }
+        }
+    }
+            
+
+    public static void main(String[] args) {
+        final Friend alphonse =
+            new Friend("Alphonse");
+        final Friend gaston =
+            new Friend("Gaston");
+        new Thread(new BowLoop(alphonse, gaston)).start();
+        new Thread(new BowLoop(gaston, alphonse)).start();
+    }
+}
+```
+
+### Executors
+
+In large-scale applications, it makes sense to separate thread management and creation from the rest of the application.
+
+##### Executor Interfaces
+
+**Executor**
+
+a simple interface that supports launching new tasks.
+
+The Executor interface provides a single method, execute, designed to be a drop-in replacement for a common thread-creation idiom. 
+
+replace `(new Thread(r)).start();` with `e.execute(r);` ( r -> Runnable, e -> Executor object)
+
+**ExecutorService**
+
+a subinterface of Executor, which adds features that help manage the life cycle, both of the individual tasks and of the executor itself.
+
+more versatile submit method.
+
+accepts Callable, Runnable objects.
+
+which allow the task to return a value.
+
+The submit method returns a Future object, which is used to retrieve the Callable return value and to manage the status of both Callable and Runnable tasks.
+
+provides methods for submitting large collections of Callable objects.
+
+provides a number of methods for managing the shutdown of the executor.
+
+**ScheduledExecutorService**
+
+a subinterface of ExecutorService, supports future and/or periodic execution of tasks.
+
+schedule, which executes a Runnable or Callable task after a specified delay.
+
+scheduleAtFixedRate and scheduleWithFixedDelay, which executes specified tasks repeatedly, at defined intervals.
+
+##### Thread Pools
+
+consist of worker threads.
+
+Using worker threads minimizes the overhead due to thread creation. 
+
+fixed thread pool. This type of pool always has a specified number of threads running;
+
+applications using it degrade gracefully
+
+newFixedThreadPool factory method in java.util.concurrent.Executors:
+
+* newCachedThreadPool-> executor with an expandable thread pool -> suitable for applications that launch many short-lived tasks.
+* newSingleThreadExecutor -> creates an executor that executes a single task at a time.
+* Several factory methods are ScheduledExecutorService versions of the above executors.
+
+```
+java.util.concurrent.ThreadPoolExecutor
+java.util.concurrent.ScheduledThreadPoolExecutor
+```
+
+### Fork/Join
+
+### Concurrent Collections
+
+* **BlockingQueue** defines a first-in-first-out data structure that blocks or times out when you attempt to add to a full queue, or retrieve from an empty queue.
+* **ConcurrentMap** is a subinterface of java.util.Map that defines useful atomic operations. These operations remove or replace a key-value pair only if the key is present, or add a key-value pair only if the key is absent. Making these operations atomic helps avoid synchronization. The standard general-purpose implementation of ConcurrentMap is ConcurrentHashMap, which is a concurrent analog of HashMap.
+* **ConcurrentNavigableMap** is a subinterface of ConcurrentMap that supports approximate matches. The standard general-purpose implementation of ConcurrentNavigableMap is ConcurrentSkipListMap, which is a concurrent analog of TreeMap.
+
+### Atomic Variables
+
+The `java.util.concurrent.atomic` package defines classes that support atomic operations on single variables. 
+
+All classes have get and set methods that work like reads and writes on volatile variables. 
+
+That is, a set has a happens-before relationship with any subsequent get on the same variable. 
+
+The atomic compareAndSet method also has these memory consistency features, as do the simple atomic arithmetic methods that apply to integer atomic variables.
+
+```
+import java.util.concurrent.atomic.AtomicInteger;
+
+class AtomicCounter {
+    private AtomicInteger c = new AtomicInteger(0);
+
+    public void increment() {
+        c.incrementAndGet();
+    }
+
+    public void decrement() {
+        c.decrementAndGet();
+    }
+
+    public int value() {
+        return c.get();
+    }
+
+}
+```
+
+### Concurrent Random Numbers
+
+ThreadLocalRandom -> random numbers from multiple threads or ForkJoinTasks.
+
+For concurrent access, using ThreadLocalRandom instead of Math.random() results in less contention and, ultimately, better performance.
+
+All you need to do is call ThreadLocalRandom.current(), then call one of its methods to retrieve a random number. 
+
+Here is one example:
+
+```
+int r = ThreadLocalRandom.current().nextInt(4, 77);
+```
+
+# Further Explorations
+
+[Java Concurrent Animated](https://sourceforge.net/projects/javaconcurrenta/): Animations that show usage of concurrency features.
+
 TODO
 
 [LINK](https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html)
