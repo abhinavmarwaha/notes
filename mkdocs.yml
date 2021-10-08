@@ -41,9 +41,9 @@ plugins:
         - en
   - minify:
       minify_html: true
-  - pdf-export:
-        verbose: true
-        media_type: print
+  # - pdf-export:
+  #       verbose: true
+  #       media_type: print
 
 extra:
   social:
