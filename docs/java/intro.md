@@ -63,3 +63,7 @@ platform-independent environment
 * *portable*
 * *Write once, run anywhere*
 * *Distribute software easily*: With Java Web Start software.
+
+### JEE vs JSE
+
+Java™ Standard Edition (Java™ SE ) and the Java™ Enterprise Edition (Java™ EE). 
