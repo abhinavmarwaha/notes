@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "mkdocs build && workbox injectManifest",
+    "gh-deploy": "mkdocs build && workbox injectManifest && ghp-import site",
     "serve-pwa": "python -m http.server 8000 --bind 127.0.0.1 -d site",
     "build-serve": "npm run build && python -m http.server 8000 --bind 127.0.0.1 -d site"
   },
