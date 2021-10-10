@@ -12,7 +12,7 @@ mkdocs==1.1.2
 mkdocs-material==7.1.4
 mkdocs-material-extensions==1.0.1
 mkdocs-minify-plugin==0.4.0
-nltk==3.6.2
+nltk>=3.6.4
 Pygments==2.9.0
 pymdown-extensions==8.2
 PyYAML==5.4.1
