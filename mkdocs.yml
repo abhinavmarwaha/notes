@@ -279,3 +279,8 @@ markdown_extensions:
   - pymdownx.tasklist
   - pymdownx.details
   - footnotes
+
+#PWA Config
+use_directory_urls: false
+scope: "./"
+version: 1.0.0

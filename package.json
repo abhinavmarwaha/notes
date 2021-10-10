@@ -1,0 +1,23 @@
+{
+  "name": "abhinav-notes",
+  "version": "1.0.0",
+  "description": "Abhinav's Second Brain",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "mkdocs build && workbox injectManifest",
+    "serve-pwa": "python -m http.server 8000 --bind 127.0.0.1 -d site",
+    "build-serve": "npm run build && python -m http.server 8000 --bind 127.0.0.1 -d site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "workbox-cli": "^6.3.0"
+  },
+  "dependencies": {
+    "@material/snackbar": "^13.0.0"
+  }
+}
