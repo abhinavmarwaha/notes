@@ -2,6 +2,7 @@
 
 - [ ] SEO
 - [ ] Analytics
+- [ ] cross posting
 
 ## Content
 

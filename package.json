@@ -11,9 +11,9 @@
     "serve-pwa": "python -m http.server 8000 --bind 127.0.0.1 -d site",
     "build-serve": "npm run build && python -m http.server 8000 --bind 127.0.0.1 -d site"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["notes"],
+  "author": "Abhinav Marwaha",
+  "license": "CC0",
   "devDependencies": {
     "workbox-cli": "^6.3.0"
   },
