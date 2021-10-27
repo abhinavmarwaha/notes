@@ -26,6 +26,7 @@ mkdocs serve
 # Goals
 
 * meaningllfull variables
+* useful cheatsheet
 * same variable sysetem all above
 * less words explanantion for revision speed
 * format: ()[]
