@@ -267,6 +267,8 @@ nav:
   - web.md
   - google-fu.md
   - no-code.md
+  - emacs.md
+  - linux/setup.md
 
 markdown_extensions:
   - admonition
