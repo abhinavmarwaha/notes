@@ -1,7 +1,9 @@
 # Emacs
 
+
 C-x -> Ctrl + X
 M-x -> Alt + X
+(_modifier keys_)
 
 C-x, C-g -> close session
 C-g -> close command
@@ -71,3 +73,72 @@ Bottom line -> mini buffer
 C-x C-b -> list buffers
 C-x b -> type buffer name to visit
 C-x s -> save some buffers
+
+### EXtend commands
+
+C-x
+M-x -> name of command
+
+C-z -> exit emacs temporarily
+ 
+enter -> %emacs% or fg
+
+M-x recover-this-file to get autosaved file
+M-x fundamental-mode -> switch to major mode
+
+### Tab
+
+to complete command
+
+### Mode Line
+
+C-h m -> documentation of current mode
+
+### Searching
+
+C-s -> forward
+C-r -> reverse
+
+<DEL> -> move backwards
+C-s -> terminate search
+
+### Windows
+
+C-x 2 -> window split
+C-M-v -> scroll the bottom window
+C-x o -> scroll to other window
+
+### Frames
+collection of windows, menu, scroll bar etc
+
+C-x 5 2 -> new frame
+C-x 5 0 -> removes selected frame
+
+### Recursive editing level
+[(fundamental)]
+
+
+<ESC><ESC><ESC> -> exit
+
+### Getting help
+
+C-h ?
+F1
+M-x help
+C-h c <command> -> show help about command
+C-h k <command> -> show more help about command
+C-h f <function name>
+C-h v <variable name>
+C-h a <regex>
+C-h i <manual>
+
+### Dired
+
+### Completion
+
+### Org-mode
+
+
+
+
+

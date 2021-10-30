@@ -70,10 +70,21 @@ sudo systemctl enable vmtoolsd
 sudo systemctl start vmtoolsd
 ```
 
+##### Clipboard
+
+vmx file 
+
+```
+isolation.tools.copy.disable = "FALSE"
+isolation.tools.dnd.disable = "FALSE"
+isolation.tools.paste.disable = "FALSE"
+isolation.tools.hgfs.disable = "FALSE"
+```
+
 ### Utils
 
 ```
-pacman -S firefox-developer-edition
+pacman -S firefox-developer-edition yay
 ```
 
 ### Theming

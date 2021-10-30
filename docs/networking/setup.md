@@ -1,4 +1,6 @@
-# System wide TOR
+# Networking Setup
+
+### System wide TOR
 
 * Applications can still learn your computer's hostname, MAC address, serial number, timezone, etc. and those with root privileges can disable the firewall entirely.
 *  In other words, transparent torification with iptables protects against accidental connections and DNS leaks by misconfigured software, it is not sufficient to protect against malware or software with serious security vulnerabilities.
