@@ -1,4 +1,4 @@
-### Arch Installation
+# Arch Installation
 
 ```
 fdisk -l
@@ -6,7 +6,7 @@ cfdisk /dev/sda
 
 /dev/sda1 - 1G - for /boot
 /dev/sda2 - 5G - for root
-/dev/sda3 - 1G - for swap
+/dev/sda3 - 1G - for swap -> make type to swap
 
 mkfs.ext4 /dev/sda1
 mkfs.ext4 /dev/sda2
@@ -35,8 +35,18 @@ ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
 hwclock --systohc --utc
 echo arindam-pc > /etc/hostname
 systemctl enable dhcpcd
+```
 
+```
 passwd root
+
+useradd -m -g users -G main -s /bin/bash abhinav
+passwd abhinav
+
+nano /etc/sudoers
+
+root ALL=(ALL) ALL
+abhinav ALL=(ALL) ALL
 ```
 
 ```
@@ -100,3 +110,5 @@ Move the extracted folder containing the icons to either ~/.icons or ~/.local/sh
 Optional: run gtk-update-icon-cache -f -t ~/.icons/<theme_name> to update the icon cache.
 Select the icon theme using the appropriate configuration tool for your desktop environment or window manager.
 ```
+
+### Emacs
