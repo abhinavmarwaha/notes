@@ -63,7 +63,11 @@ reboot
 ```
 sudo pacman -S --needed xorg
 
-sudo pacman -S --needed xfce4 parole ristretto thunar-archive-plugin thunar-media-tags-plugin xfce4-goodies file-roller network-manager-applet leafpad epdfview galculator lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings capitaine-cursors arc-gtk-theme xdg-user-dirs-gtk
+sudo pacman -S --needed xfce4 xfce4-goodies parole ristretto thunar-archive-plugin \\
+thunar-media-tags-plugin file-roller network-manager-applet \\
+leafpad epdfview galculator lightdm lightdm-gtk-greeter \\
+lightdm-gtk-greeter-settings capitaine-cursors arc-gtk-theme \\
+xdg-user-dirs-gtk
 
 systemctl enable lightdm
 systemctl enable NetworkManager
@@ -94,7 +98,16 @@ isolation.tools.hgfs.disable = "FALSE"
 ### Utils
 
 ```
-pacman -S firefox-developer-edition yay
+pacman -S firefox-developer-edition 
+yay
+```
+
+### Desktop going black error
+
+```
+Remove $HOME/.cache/sessions and logoff/on.
+
+xfdesktop --replace
 ```
 
 ### Theming
