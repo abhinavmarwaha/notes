@@ -260,6 +260,18 @@ nav:
     - algo/misc/recursion.md
     - algo/misc/segmentation-fault.md
     - algo/misc/swap.md
+  - OS:
+    - os/intro.md
+    - os/boot.md
+    - os/bios.md
+    - os/kernel.md
+    - os/partition.md
+    - os/process.md
+    - os/ipc.md
+    - os/sync.md
+    - os/deadlock.md
+    - os/memory.md
+    - os/virtual.md
   - Networking:
     - networking/setup.md
   - TOC:
