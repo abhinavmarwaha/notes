@@ -7,3 +7,6 @@
 2. Cost
 3. Capacity
 4. Permanent
+
+### Management
+
