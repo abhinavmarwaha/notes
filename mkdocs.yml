@@ -272,6 +272,20 @@ nav:
     - os/deadlock.md
     - os/memory.md
     - os/virtual.md
+  - DBMS:
+    - dbms/intro.md
+    - dbms/lang.md
+    - dbms/rdbms.md
+    - dbms/txn.md
+    - dbms/cursors.md
+    - dbms/deadlock.md
+    - dbms/normalization.md
+    - dbms/implementation.md
+    - dbms/cap.md
+    - dbms/scale.md
+    - dbms/index.md
+    - dbms/storage.md
+    - dbms/in-memory.md
   - Networking:
     - networking/setup.md
   - TOC:

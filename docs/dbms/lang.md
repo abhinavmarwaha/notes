@@ -47,3 +47,8 @@ transaction control
 
 ![](imgs/cheat-sql.png)
 [interviewbit](https://www.interviewbit.com/sql-cheat-sheet/)
+
+### Misc
+
+* truncate deletes entire table
+* 
