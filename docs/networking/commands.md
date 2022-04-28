@@ -1,0 +1,6 @@
+# Windows
+
+* ipconfig /all
+
+# *nix
+
