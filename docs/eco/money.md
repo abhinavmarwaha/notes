@@ -1,12 +1,11 @@
-Lack of coincidence of wants across: 	Solution:
-Goods: Not the same good. 	One
-Time: I want to sell something today but I want to buy something in the future. 	Durable
-Scale: I want to sell something large and only buy something small. 	
+# Money
 
-Homogenous, Divisible, and groupable
-
-Space: I want to sell something in one location and buy something elsewhere.
-	 Transportable
+* Lack of **coincidence of wants** across: Goods, Not the same good though.
+* **Time**: I want to sell something today but I want to buy something in the future.
+* Durable
+* **Scale**: I want to sell something large and only buy something small. 	
+* Homogenous, Divisible, and groupable
+* **Space**: I want to sell something in one location and buy something elsewhere. **Transportable**
 
 
     Choices will quickly focus on the few most marketable commodities available.

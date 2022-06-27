@@ -1,16 +1,13 @@
- Rothbard's typology of intervention:
+# Violence
 
-1- Autistic: A violates the property or person of B.
+Rothbard's typology of intervention:
 
-Example: murder, prohibition of speech
-
-2- Binary: A coercively acquires property or service from B.
-
-Example: theft, conscription, slavery, taxation.
-
-3- Triangular: A coercively imposes terms on the interaction between B and C.
-
-Example: Price controls, licensing,
+1. **Autistic**: A violates the property or person of B. 
+    eg: murder, prohibition of speech
+2. **Binary**: A coercively acquires property or service from B. 
+    eg: theft, conscription, slavery, taxation.
+3. **Triangular**: A coercively imposes terms on the interaction between B and C. 
+    eg: Price controls, licensing,
 
     Coercion can be done by individuals, or by governments. Individual coercion is just crime; its economic analysis is obvious and trivial: the aggressor benefits at the expense of the victim. Economic analysis of government is more interesting.
     The most important difference between government action and free exchange is that the latter is always expected to have a positive value to all participants, else they wouldn't choose it. The first is always harmful to someone, or else they would not need to be coerced into it.
